@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let home = HomeTVC()
         let loginScreen = LoginView()
         let nav = UINavigationController(rootViewController: home)
-        nav.addChild(home)
+        //nav.addChild(home)
         nav.navigationBar.backgroundColor = .init(red: 29/255, green: 161/255, blue: 242/255, alpha: 1)
         return nav
     }

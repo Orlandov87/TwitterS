@@ -17,6 +17,7 @@ class TweetTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
+        backgroundColor = .yellow
         print("I'm being called")
         //viewHelp()
     }
