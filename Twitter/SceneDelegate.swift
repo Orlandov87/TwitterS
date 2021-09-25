@@ -15,8 +15,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LogInVC()
+        window?.rootViewController = createNavigation()
         window?.makeKeyAndVisible()
+        configureNavigationBar()
+    }
+    
+    func createNavigation() -> UINavigationController {
+        let home = HomeTVC()
+        let loginScreen = LoginView()
+        let nav = UINavigationController(rootViewController: home)
+        nav.addChild(home)
+        nav.navigationBar.backgroundColor = .init(red: 29/255, green: 161/255, blue: 242/255, alpha: 1)
+        return nav
+    }
+    
+    func configureNavigationBar() {
+        UINavigationBar.appearance().tintColor = .systemGreen
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
