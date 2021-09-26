@@ -22,8 +22,9 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+I had several issues trying to show the persistance of the app. It was working on one point, It looks like twitter has blocked my IP address from accessing their servers. I've created new accounts to test this and it blocks me. I was able to make the app work properly in the begining when I was debugging. 
 
 <img src='output.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-I had several issues trying to show the persistance of the app. It looks like twitter has blocked my IP address from accessing their servers. 
+
 
