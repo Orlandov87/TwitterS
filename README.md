@@ -1,8 +1,8 @@
-# Project 3 - *Name of App Here*
+# Project 3 - Twitter
 
 **Name of your app** is a basic twitter app to read your tweets.
 
-Time spent: **X** hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
@@ -24,4 +24,6 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='output.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+I had several issues trying to show the persistance of the app. It looks like twitter has blocked my IP address from accessing their servers. 
 
