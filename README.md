@@ -1,8 +1,6 @@
 # Project 3 - Twitter
 
-**Name of your app** is a basic twitter app to read your tweets.
-
-📝 `NOTE` Paste this template at the top of your existing `README.md` file from part 1 of this assignment. (🚫 Remove this paragraph after after checking off completed user stories)
+Basica Twitter Clone is a basic twitter app to read your tweets.
 
 # Twitter - Part II
 
