@@ -17,8 +17,8 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        numberOfTweets = 20
-        myRefreshControl.addTarget(self, action: #selector(loadView), for: .valueChanged)
+        self.loadTweets()
+        myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         self.tableView.refreshControl = myRefreshControl
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 150
@@ -31,10 +31,10 @@ class HomeTableViewController: UITableViewController {
     
     @objc func loadTweets() {
         numberOfTweets = 20
+        
         let myUrl = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["counts": numberOfTweets]
         TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: { (tweets: [NSDictionary]) in
-            
             self.tweetArray.removeAll()
             for tweet in tweets {
                 self.tweetArray.append(tweet)
@@ -59,7 +59,7 @@ class HomeTableViewController: UITableViewController {
             }
             self.tableView.reloadData()
         }, failure: { Error in
-            print("Could not retrieve tweets!")
+            print("Could not retrieve more tweets!")
         })
     }
     
@@ -90,8 +90,6 @@ class HomeTableViewController: UITableViewController {
         
         return cell
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
